@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>235</x>
+      <x>240</x>
       <y>0</y>
       <w>105</w>
       <h>95</h>
@@ -22,32 +22,15 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>245</x>
+      <x>420</x>
       <y>145</y>
-      <w>105</w>
-      <h>95</h>
-    </coordinates>
-    <panel_attributes>default::Viereck
---
--a: int
--b: int
--c: int
--d: int
---
-+</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>240</x>
-      <y>270</y>
       <w>105</w>
       <h>95</h>
     </coordinates>
     <panel_attributes>default::Rectangle
 --
--
+-a: int
+-b: int
 --
 +Rectangle(a: int, b: int)
 +scale(factor: int)</panel_attributes>
@@ -56,8 +39,8 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>240</x>
-      <y>395</y>
+      <x>420</x>
+      <y>270</y>
       <w>105</w>
       <h>95</h>
     </coordinates>
@@ -73,7 +56,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>115</x>
+      <x>85</x>
       <y>145</y>
       <w>105</w>
       <h>95</h>
@@ -84,6 +67,7 @@ default::Polygon
 -b: int
 -c: int
 --
++Triangle(a: int, b: int, c: int)
 +setA(a: int)
 +setB(b: int)
 +setC(c: int)</panel_attributes>
@@ -92,19 +76,8 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>275</x>
+      <x>455</x>
       <y>225</y>
-      <w>24</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>15;45;15;15</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>275</x>
-      <y>350</y>
       <w>24</w>
       <h>54</h>
     </coordinates>
@@ -114,7 +87,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>115</x>
+      <x>85</x>
       <y>270</y>
       <w>105</w>
       <h>95</h>
@@ -131,7 +104,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>150</x>
+      <x>120</x>
       <y>225</y>
       <w>24</w>
       <h>54</h>
@@ -142,36 +115,55 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>155</x>
+      <x>125</x>
       <y>80</y>
-      <w>109</w>
+      <w>144</w>
       <h>74</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>100;15;15;65</additional_attributes>
+    <additional_attributes>135;15;15;65</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>275</x>
+      <x>305</x>
       <y>80</y>
-      <w>24</w>
+      <w>174</w>
       <h>74</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>15;15;15;65</additional_attributes>
+    <additional_attributes>15;15;165;65</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>375</x>
-      <y>145</y>
+      <x>250</x>
+      <y>270</y>
       <w>105</w>
       <h>95</h>
     </coordinates>
     <panel_attributes>default::RegularPolygon
 --
 -a: int
+-w: int
+--
++RegularPolygon(a: int, w: int)
++set(a: int)
++scale(factor: int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>250</x>
+      <y>145</y>
+      <w>105</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+default::IRegularPolygon
+--
+-
 --
 +set(a: int)
 +scale(factor: int)</panel_attributes>
@@ -180,12 +172,45 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>300</x>
+      <x>280</x>
       <y>80</y>
-      <w>124</w>
+      <w>24</w>
       <h>74</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>15;15;115;65</additional_attributes>
+    <additional_attributes>15;15;15;65</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>225</y>
+      <w>24</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>15;15;15;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>175</x>
+      <y>285</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>75;15;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>340</x>
+      <y>285</y>
+      <w>89</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>15;15;80;15</additional_attributes>
   </element>
 </diagram>
