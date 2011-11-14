@@ -19,7 +19,8 @@ public interface IRegularPolygon extends Polygon {
 	 * 
 	 * @param factor
 	 *            scale factor
+	 * @throws  InvalidValueException
 	 */
-	void scale(double factor);
+	void scale(double factor) throws InvalidValueException;
 
 }
