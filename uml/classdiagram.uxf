@@ -12,8 +12,6 @@
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 default::Polygon
 --
--
---
 +edges(): int
 +area(): double
 +perimeter(): double</panel_attributes>
@@ -29,8 +27,8 @@ default::Polygon
     </coordinates>
     <panel_attributes>default::Rectangle
 --
--a: int
--b: int
+#a: int
+#b: int
 --
 +Rectangle(a: int, b: int)
 +scale(factor: int)</panel_attributes>
@@ -46,10 +44,8 @@ default::Polygon
     </coordinates>
     <panel_attributes>default::Square
 --
--
---
-+Square(a: int)
-+set(a: int)
++Square(s: int)
++set(s: int)
 +scale(factor: int)
 </panel_attributes>
     <additional_attributes/>
@@ -94,8 +90,6 @@ default::Polygon
       <h>152</h>
     </coordinates>
     <panel_attributes>default::EquilateralTriangle
---
--
 --
 +EuilateralTriangle(a: int)
 +set(a: int)
@@ -166,8 +160,6 @@ mMn kein untertyp von triangle</panel_attributes>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 default::IRegularPolygon
 --
--
---
 +set(a: int)
 +scale(factor: int)</panel_attributes>
     <additional_attributes/>
@@ -198,12 +190,12 @@ default::IRegularPolygon
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>144</x>
-      <y>456</y>
-      <w>136</w>
-      <h>40</h>
+      <y>360</y>
+      <w>160</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>120;24;24;24</additional_attributes>
+    <additional_attributes>144;24;24;120</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>

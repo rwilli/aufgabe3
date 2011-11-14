@@ -5,8 +5,8 @@
  */
 public class Rectangle implements Polygon {
 
-	private double a;
-	private double b;
+	protected double a;
+	protected double b;
 
 	/**
 	 * Constructor

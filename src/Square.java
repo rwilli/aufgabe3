@@ -6,8 +6,6 @@
  */
 public class Square extends Rectangle implements IRegularPolygon {
 
-	private double s;
-
 	/**
 	 * The constructor calls the constructor of the super class Rectangle
 	 * 
@@ -17,7 +15,6 @@ public class Square extends Rectangle implements IRegularPolygon {
 	 */
 	public Square(double s) throws InvalidValueException {
 		super(s, s);
-		this.s = s;
 	}
 
 	/*
@@ -29,7 +26,9 @@ public class Square extends Rectangle implements IRegularPolygon {
 	public void set(double s) throws InvalidValueException {
 		if (s <= 0)
 			throw new InvalidValueException(s);
-		this.s = s;
+		
+		this.a = s;
+		this.b = s;
 	}
 
 	/*
@@ -39,9 +38,10 @@ public class Square extends Rectangle implements IRegularPolygon {
 	 */
 	@Override
 	public void scale(double factor)throws InvalidValueException{
+		if(factor <= 0) 
+			throw new InvalidValueException(factor); 
 		
-		if(factor <= 0) throw new InvalidValueException(factor); 
-		this.s = s * factor;
+		super.scale(factor);
 	}
-
+	
 }

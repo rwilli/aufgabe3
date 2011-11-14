@@ -6,9 +6,9 @@
  */
 public class Triangle implements Polygon {
 
-	private double a;
-	private double b;
-	private double c;
+	protected double a;
+	protected double b;
+	protected double c;
 
 	/**
 	 * Constructor for a triangle.
@@ -23,7 +23,9 @@ public class Triangle implements Polygon {
 	 */
 	public Triangle(double a, double b, double c) throws InvalidValueException {
 		
-		if (a <= 0 || b <= 0 || c <= 0) throw new InvalidValueException(a, b, c);
+		if (a <= 0 || b <= 0 || c <= 0) 
+			throw new InvalidValueException(a, b, c);
+		
 		this.a = a;
 		this.b = b;
 		this.c = c;
@@ -49,9 +51,13 @@ public class Triangle implements Polygon {
 	public double area() {
 		// Heron's formula is used for the area of an irregular triangle
 		// s is half the perimeter
-		double s = 1 / 2 * perimeter();
+		double s = (1 / 2) * perimeter();
 
-		return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+		double t = (s - this.a) * (s - this.b) * (s - this.c);
+		
+		double r = t*t;
+		
+		return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
 	}
 
 	/*
@@ -71,7 +77,9 @@ public class Triangle implements Polygon {
 	 * @throws InvalidValueException 
 	 */
 	public void setA( double a) throws InvalidValueException{
-		if (a <= 0 ) throw new InvalidValueException(a);
+		if (a <= 0 ) 
+			throw new InvalidValueException(a);
+		
 		this.a = a;
 	}
 	/**
@@ -80,7 +88,9 @@ public class Triangle implements Polygon {
 	 * @throws InvalidValueException 
 	 */
 	public void setB( double b) throws InvalidValueException{
-		if (b <= 0) throw new InvalidValueException(b);
+		if (b <= 0) 
+			throw new InvalidValueException(b);
+		
 		this.b = b;
 	}/**
 	 * Set the side C
@@ -88,7 +98,9 @@ public class Triangle implements Polygon {
 	 * @throws InvalidValueException 
 	 */
 	public void setC( double c) throws InvalidValueException{
-		if (c <= 0) throw new InvalidValueException(c);
+		if (c <= 0) 
+			throw new InvalidValueException(c);
+		
 		this.c = c;
 	}
 
