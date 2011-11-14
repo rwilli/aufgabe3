@@ -64,5 +64,32 @@ public class Triangle implements Polygon {
 		// returns the sum of the three edges.
 		return this.a + this.b + this.c;
 	}
+	
+	/**
+	 * Set the side A
+	 * @param a
+	 * @throws InvalidValueException 
+	 */
+	public void setA( double a) throws InvalidValueException{
+		if (a <= 0 ) throw new InvalidValueException(a);
+		this.a = a;
+	}
+	/**
+	 * Set the side B
+	 * @param b
+	 * @throws InvalidValueException 
+	 */
+	public void setB( double b) throws InvalidValueException{
+		if (b <= 0) throw new InvalidValueException(b);
+		this.b = b;
+	}/**
+	 * Set the side C
+	 * @param c
+	 * @throws InvalidValueException 
+	 */
+	public void setC( double c) throws InvalidValueException{
+		if (c <= 0) throw new InvalidValueException(c);
+		this.c = c;
+	}
 
 }
