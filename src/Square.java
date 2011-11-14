@@ -38,7 +38,9 @@ public class Square extends Rectangle implements IRegularPolygon {
 	 * @see IRegularPolygon#scale(double)
 	 */
 	@Override
-	public void scale(double factor) {
+	public void scale(double factor)throws InvalidValueException{
+		
+		if(factor <= 0) throw new InvalidValueException(factor); 
 		this.s = s * factor;
 	}
 

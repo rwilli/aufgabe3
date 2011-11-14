@@ -4,15 +4,15 @@
  * @author Gruppe222
  * 
  */
-
+//TODO Polygon unnštig ? 
 public class RegularPolygon implements IRegularPolygon, Polygon {
 
 	private double s;
 	private int angle;
 
-	// TODO: Exceptions
 	public RegularPolygon(double s, int angle) throws InvalidValueException {
 
+		// Wieso <0 ? und  <60 ? 
 		if (s <= 0) throw new InvalidValueException(s);
 		if (angle < 60) throw new InvalidValueException(angle);
 		
@@ -57,6 +57,7 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 	@Override
 	public double area() {
 		// TODO
+		
 		return 0.0;
 	}
 
@@ -90,8 +91,10 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 	 * @see IRegularPolygon#scale(double)
 	 */
 	@Override
-	public void scale(double factor) {
-		this.s = s * factor;
+	public void scale(double factor) throws InvalidValueException{
+		
+		if(factor <= 0) throw new InvalidValueException(factor);
+	    this.s = s * factor;
 	}
 
 }

@@ -53,5 +53,18 @@ public class Rectangle implements Polygon {
 	public double perimeter() {
 		return 2 * a + 2 * b;
 	}
+	
+	/**
+	 * Scales side a and b by a given Factor
+	 * @param factor
+	 * @throws InvalidValueException 
+	 */
+	
+	public void scale(double factor) throws InvalidValueException {
+		
+		if(factor <= 0 ) throw new InvalidValueException(factor);
+		this.a = a * factor;
+		this.b = b * factor;
+	}
 
 }
