@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="11.3">
-  <zoom_level>5</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>240</x>
+      <x>248</x>
       <y>0</y>
-      <w>105</w>
-      <h>95</h>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 default::Polygon
@@ -22,10 +22,10 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>420</x>
-      <y>145</y>
-      <w>105</w>
-      <h>95</h>
+      <x>536</x>
+      <y>232</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>default::Rectangle
 --
@@ -39,10 +39,10 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>420</x>
-      <y>270</y>
-      <w>105</w>
-      <h>95</h>
+      <x>536</x>
+      <y>432</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>default::Square
 --
@@ -50,16 +50,17 @@ default::Polygon
 --
 +Square(a: int)
 +set(a: int)
-+scale(factor: int)</panel_attributes>
++scale(factor: int)
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>85</x>
-      <y>145</y>
-      <w>105</w>
-      <h>95</h>
+      <x>0</x>
+      <y>232</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>default::Triangle
 --
@@ -76,21 +77,21 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>455</x>
-      <y>225</y>
-      <w>24</w>
-      <h>54</h>
+      <x>592</x>
+      <y>360</y>
+      <w>40</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>15;45;15;15</additional_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>85</x>
-      <y>270</y>
-      <w>105</w>
-      <h>95</h>
+      <x>0</x>
+      <y>432</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>default::EquilateralTriangle
 --
@@ -98,49 +99,51 @@ default::Polygon
 --
 +EuilateralTriangle(a: int)
 +set(a: int)
-+scale(factor: int)</panel_attributes>
++scale(factor: int)
+
+mMn kein untertyp von triangle</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>120</x>
-      <y>225</y>
-      <w>24</w>
-      <h>54</h>
+      <x>56</x>
+      <y>360</y>
+      <w>40</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>15;45;15;15</additional_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>125</x>
-      <y>80</y>
-      <w>144</w>
-      <h>74</h>
+      <x>64</x>
+      <y>128</y>
+      <w>232</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>135;15;15;65</additional_attributes>
+    <additional_attributes>216;24;24;104</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>305</x>
-      <y>80</y>
-      <w>174</w>
-      <h>74</h>
+      <x>352</x>
+      <y>128</y>
+      <w>280</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>15;15;165;65</additional_attributes>
+    <additional_attributes>24;24;264;104</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>250</x>
-      <y>270</y>
-      <w>105</w>
-      <h>95</h>
+      <x>264</x>
+      <y>432</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>default::RegularPolygon
 --
@@ -155,10 +158,10 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>250</x>
-      <y>145</y>
-      <w>105</w>
-      <h>95</h>
+      <x>264</x>
+      <y>232</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 default::IRegularPolygon
@@ -172,45 +175,45 @@ default::IRegularPolygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>280</x>
-      <y>80</y>
-      <w>24</w>
-      <h>74</h>
+      <x>312</x>
+      <y>128</y>
+      <w>40</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>15;15;15;65</additional_attributes>
+    <additional_attributes>24;24;24;104</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>280</x>
-      <y>225</y>
-      <w>24</w>
-      <h>54</h>
+      <x>312</x>
+      <y>360</y>
+      <w>40</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>15;15;15;45</additional_attributes>
+    <additional_attributes>24;24;24;72</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>175</x>
-      <y>285</y>
-      <w>84</w>
-      <h>24</h>
+      <x>144</x>
+      <y>456</y>
+      <w>136</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>75;15;15;15</additional_attributes>
+    <additional_attributes>120;24;24;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>340</x>
-      <y>285</y>
-      <w>89</w>
-      <h>24</h>
+      <x>400</x>
+      <y>360</y>
+      <w>152</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>15;15;80;15</additional_attributes>
+    <additional_attributes>24;24;136;120</additional_attributes>
   </element>
 </diagram>
