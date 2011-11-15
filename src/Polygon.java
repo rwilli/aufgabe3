@@ -8,7 +8,7 @@ public interface Polygon {
 	/**
 	 * Returns the number of edges of a polygon as integer.
 	 * 
-	 * @return Integer the number of edges
+	 * @return Integer the number of edges. Is always >= 3
 	 */
 	int edges();
 

@@ -28,6 +28,7 @@ public abstract class Quadrangle implements Polygon {
 	 */
 	@Override
 	public double area() {
+		// length a and b are greater than zero
 		return (this.a * this.b);
 	}
 
@@ -37,6 +38,7 @@ public abstract class Quadrangle implements Polygon {
 	 */
 	@Override
 	public double perimeter() {
+		// length a and b are greater than zero
 		return ((2 * this.a) + (2 * this.b));
 	}
 
