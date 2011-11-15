@@ -10,6 +10,7 @@ public interface Polygon {
 	 * 
 	 * @return Integer the number of edges. Is always >= 3
 	 */
+	// edges >= 3
 	int edges();
 
 	/**
@@ -17,6 +18,7 @@ public interface Polygon {
 	 * 
 	 * @return double the area
 	 */
+	// area > 0
 	double area();
 
 	/**
@@ -24,6 +26,7 @@ public interface Polygon {
 	 * 
 	 * @return double the perimeter
 	 */
+	// perimeter > 0
 	double perimeter();
 
 }

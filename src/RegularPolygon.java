@@ -11,15 +11,19 @@ public class RegularPolygon implements IRegularPolygon {
 
 	public RegularPolygon(int s, int angle) throws InvalidValueException {
 
-		// Wieso <0 ? und  <60 ? 
-		if (s <= 0) throw new InvalidValueException(s);
-		if (angle < 60) //throw new InvalidValueException(angle);
-		
+		// The smallest possible RegularPolygon is an equilateral triangle,
+		// having three 60 degree angles. Therefore every smaller value is
+		// forbidden. Additionally, the side length cannot be smaller than or 0.
+		if (s <= 0)
+			throw new InvalidValueException(s);
+		if (angle < 60)
+			throw new InvalidValueException(angle);
+
 		this.s = s;
 		this.angle = angle;
-		
+
 		if (edges() == -1) {
-			//throw new InvalidValueException(edges(), angle);
+			throw new InvalidValueException(angle);
 		}
 	}
 
@@ -30,22 +34,24 @@ public class RegularPolygon implements IRegularPolygon {
 	 */
 	@Override
 	public int edges() {
-		
-		Fraction f;
+
 		try {
-			f = new Fraction(angle, 180);
+			// See if a given angle makes a regular polygon.
+			// The following formula is used:
+			// n = 2 / (1 - angle/180)
+			Fraction f = new Fraction(angle, 180);
 			f = f.returnComplement();
 			Fraction result = f.divideNumberByFraction(2, f);
 			if (result.fractionIsInteger()) {
 				return (int) (result.num / result.denom);
 			}
 		} catch (InvalidValueException e) {
-			
+
 			e.printStackTrace();
 		}
-		
+
 		return -1;
-		
+
 	}
 
 	/*
@@ -55,9 +61,20 @@ public class RegularPolygon implements IRegularPolygon {
 	 */
 	@Override
 	public double area() {
-		// TODO
-		
-		return 0.0;
+		// calculates the area of a regular polygon using the method
+		// calculateApothem() to determine the length of a side to the center
+		// (measured at 90¡ angle from side)
+		double apothem = calculateApothem();
+		return 0.5 * perimeter() * apothem;
+	}
+
+	/**
+	 * Calculates the apothem of a regular polygon.
+	 * 
+	 * @return the apothem as double
+	 */
+	public double calculateApothem() {
+		return this.s / 2 * Math.tan(Math.PI / edges());
 	}
 
 	/*
@@ -80,7 +97,7 @@ public class RegularPolygon implements IRegularPolygon {
 
 		if (s <= 0)
 			throw new InvalidValueException(s);
-		
+
 		this.s = s;
 	}
 
@@ -90,11 +107,11 @@ public class RegularPolygon implements IRegularPolygon {
 	 * @see IRegularPolygon#scale(double)
 	 */
 	@Override
-	public void scale(int factor) throws InvalidValueException{
-		
-		if(factor <= 0) 
+	public void scale(int factor) throws InvalidValueException {
+
+		if (factor <= 0)
 			throw new InvalidValueException(factor);
-	    
+
 		this.s = s * factor;
 	}
 

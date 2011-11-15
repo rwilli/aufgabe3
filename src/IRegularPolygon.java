@@ -14,6 +14,7 @@ public interface IRegularPolygon extends Polygon {
 	 * @param s length of every side
 	 * @throws InvalidValueException if length s is smaller than zero
 	 */
+	// s > 0
 	void set(int s) throws InvalidValueException;
 
 	/**
@@ -26,6 +27,7 @@ public interface IRegularPolygon extends Polygon {
 	 * @param factor to scale
 	 * @throws  InvalidValueException if factor is smaller than zero
 	 */
+	// factor > 0
 	void scale(int factor) throws InvalidValueException;
 
 }

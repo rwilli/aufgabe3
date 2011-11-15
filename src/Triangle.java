@@ -55,7 +55,7 @@ public class Triangle implements Polygon {
 	public double area() {
 		// Heron's formula is used for the area of an irregular triangle
 		// s is half the perimeter
-		double s = (1 / 2) * perimeter();
+		double s = 0.5 * perimeter();
 		
 		return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
 	}
