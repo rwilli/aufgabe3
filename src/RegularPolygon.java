@@ -7,10 +7,10 @@
 //TODO Polygon unnštig ? 
 public class RegularPolygon implements IRegularPolygon, Polygon {
 
-	private double s;
+	private int s;
 	private int angle;
 
-	public RegularPolygon(double s, int angle) throws InvalidValueException {
+	public RegularPolygon(int s, int angle) throws InvalidValueException {
 
 		// Wieso <0 ? und  <60 ? 
 		if (s <= 0) throw new InvalidValueException(s);
@@ -77,7 +77,7 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 	 * @see IRegularPolygon#set(double)
 	 */
 	@Override
-	public void set(double s) throws InvalidValueException {
+	public void set(int s) throws InvalidValueException {
 
 		if (s <= 0)
 			throw new InvalidValueException(s);
@@ -91,7 +91,7 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 	 * @see IRegularPolygon#scale(double)
 	 */
 	@Override
-	public void scale(double factor) throws InvalidValueException{
+	public void scale(int factor) throws InvalidValueException{
 		
 		if(factor <= 0) 
 			throw new InvalidValueException(factor);

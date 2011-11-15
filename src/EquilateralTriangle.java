@@ -13,7 +13,7 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	 * @param s length of side
 	 * @throws InvalidValueException if side is smaller than zero
 	 */
-	public EquilateralTriangle(double s) throws InvalidValueException {
+	public EquilateralTriangle(int s) throws InvalidValueException {
 		super(s, s, s);	
 	}
 
@@ -23,7 +23,7 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	 * @see IRegularPolygon#set(double)
 	 */
 	@Override
-	public void set(double s) throws InvalidValueException {
+	public void set(int s) throws InvalidValueException {
 		if (s <= 0) 
 			throw new InvalidValueException(s);
 		
@@ -36,7 +36,7 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	 * @see IRegularPolygon#scale(double)
 	 */
 	@Override
-	public void scale(double factor) throws InvalidValueException {
+	public void scale(int factor) throws InvalidValueException {
 		if (factor <= 0) 
 			throw new InvalidValueException(factor);
 		
@@ -48,7 +48,7 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	 * @see Triangle#setA(double)
 	 */
 	@Override
-	public void setA(double a) throws InvalidValueException {
+	public void setA(int a) throws InvalidValueException {
 		this.set(a);
 	}
 
@@ -57,7 +57,7 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	 * @see Triangle#setB(double)
 	 */
 	@Override
-	public void setB(double b) throws InvalidValueException {
+	public void setB(int b) throws InvalidValueException {
 		this.set(b);
 	}
 
@@ -66,7 +66,7 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	 * @see Triangle#setC(double)
 	 */
 	@Override
-	public void setC(double c) throws InvalidValueException {
+	public void setC(int c) throws InvalidValueException {
 		this.set(c);
 	}
 	

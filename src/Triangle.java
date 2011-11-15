@@ -7,13 +7,13 @@
 public class Triangle implements Polygon {
 
 	// length of side a
-	protected double a;
+	protected int a;
 	
 	// length of side b
-	protected double b;
+	protected int b;
 	
 	// length of side c
-	protected double c;
+	protected int c;
 
 	/**
 	 * Constructor for a triangle.
@@ -23,7 +23,7 @@ public class Triangle implements Polygon {
 	 * @param c length of side c
 	 * @throws InvalidValueException if one length is smaller than zero
 	 */
-	public Triangle(double a, double b, double c) throws InvalidValueException {
+	public Triangle(int a, int b, int c) throws InvalidValueException {
 		
 		if (a <= 0 || b <= 0 || c <= 0) 
 			throw new InvalidValueException(a, b, c);
@@ -74,7 +74,7 @@ public class Triangle implements Polygon {
 	 * @param a new length of side a
 	 * @throws InvalidValueException 
 	 */
-	public void setA( double a) throws InvalidValueException{
+	public void setA(int a) throws InvalidValueException{
 		if (a <= 0 ) 
 			throw new InvalidValueException(a);
 		
@@ -86,7 +86,7 @@ public class Triangle implements Polygon {
 	 * @param b new length of side b
 	 * @throws InvalidValueException 
 	 */
-	public void setB( double b) throws InvalidValueException{
+	public void setB(int b) throws InvalidValueException{
 		if (b <= 0) 
 			throw new InvalidValueException(b);
 		
@@ -98,7 +98,7 @@ public class Triangle implements Polygon {
 	 * @param c new length of side c
 	 * @throws InvalidValueException 
 	 */
-	public void setC( double c) throws InvalidValueException{
+	public void setC(int c) throws InvalidValueException{
 		if (c <= 0) 
 			throw new InvalidValueException(c);
 		

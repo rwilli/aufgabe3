@@ -12,7 +12,7 @@ public class Rectangle extends Quadrangle {
 	 * @param b length of side b
 	 * @throws InvalidValueException if one side is smaller than zero
 	 */
-	public Rectangle(double a, double b) throws InvalidValueException {
+	public Rectangle(int a, int b) throws InvalidValueException {
 
 		if (a <= 0 || b <= 0) 
 			throw new InvalidValueException(a, b);
@@ -27,7 +27,7 @@ public class Rectangle extends Quadrangle {
 	 * @param factor to scale
 	 * @throws InvalidValueException if factor is smaller than zero
 	 */
-	public void scale(double factor) throws InvalidValueException {
+	public void scale(int factor) throws InvalidValueException {
 		// scale rectangle 
 		if(factor <= 0 ) 
 			throw new InvalidValueException(factor);

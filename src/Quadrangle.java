@@ -7,10 +7,10 @@
 public abstract class Quadrangle implements Polygon {
 	
 	// length of side a
-	protected double a;
+	protected int a;
 	
 	// length of the other side b
-	protected double b;
+	protected int b;
 
 	/*
 	 * (non-Javadoc)

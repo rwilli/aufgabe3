@@ -12,7 +12,7 @@ public class Square extends Quadrangle implements IRegularPolygon {
 	 * @param s length of side
 	 * @throws InvalidValueException if side is smaller than zero
 	 */
-	public Square(double s) throws InvalidValueException {
+	public Square(int s) throws InvalidValueException {
 		this.a = this.b = s;
 	}
 
@@ -22,7 +22,7 @@ public class Square extends Quadrangle implements IRegularPolygon {
 	 * @see IRegularPolygon#set(double)
 	 */
 	@Override
-	public void set(double s) throws InvalidValueException {
+	public void set(int s) throws InvalidValueException {
 		// set side of the square if it is taller than zero
 		// otherwise throw exception
 		if (s <= 0)
@@ -36,7 +36,7 @@ public class Square extends Quadrangle implements IRegularPolygon {
 	 * @see IRegularPolygon#scale(double)
 	 */
 	@Override
-	public void scale(double factor) throws InvalidValueException {
+	public void scale(int factor) throws InvalidValueException {
 		// scale square with given factor if factor is taller than zero
 		// otherwise throw exception
 		if(factor <= 0) 
