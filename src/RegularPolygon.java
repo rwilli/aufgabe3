@@ -81,8 +81,8 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 
 		if (s <= 0)
 			throw new InvalidValueException(s);
+		
 		this.s = s;
-
 	}
 
 	/*
@@ -93,8 +93,10 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 	@Override
 	public void scale(double factor) throws InvalidValueException{
 		
-		if(factor <= 0) throw new InvalidValueException(factor);
-	    this.s = s * factor;
+		if(factor <= 0) 
+			throw new InvalidValueException(factor);
+	    
+		this.s = s * factor;
 	}
 
 }

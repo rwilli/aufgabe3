@@ -1,68 +1,37 @@
 /**
- * Rectangle class
+ * Rectangle class extends quadrangle
  * 
  * @author Gruppe222
  */
-public class Rectangle implements Polygon {
-
-	protected double a;
-	protected double b;
-
+public class Rectangle extends Quadrangle {
+	
 	/**
 	 * Constructor
 	 * 
-	 * @param a
-	 *            length
-	 * @param b
-	 *            width
+	 * @param a length of side a
+	 * @param b length of side b
+	 * @throws InvalidValueException if one side is smaller than zero
 	 */
 	public Rectangle(double a, double b) throws InvalidValueException {
 
-		if (a <= 0 || b <= 0) throw new InvalidValueException(a, b);
+		if (a <= 0 || b <= 0) 
+			throw new InvalidValueException(a, b);
 			
 		this.a = a;
 		this.b = b;
 	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see Polygon#edges()
-	 */
-	@Override
-	public int edges() {
-		return 4;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see Polygon#area()
-	 */
-	@Override
-	public double area() {
-		return a * b;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see Polygon#perimeter()
-	 */
-	@Override
-	public double perimeter() {
-		return 2 * a + 2 * b;
-	}
 	
 	/**
-	 * Scales side a and b by a given Factor
-	 * @param factor
-	 * @throws InvalidValueException 
+	 * Scales side a and b by a given factor
+	 * 
+	 * @param factor to scale
+	 * @throws InvalidValueException if factor is smaller than zero
 	 */
-	
 	public void scale(double factor) throws InvalidValueException {
+		// scale rectangle 
+		if(factor <= 0 ) 
+			throw new InvalidValueException(factor);
 		
-		if(factor <= 0 ) throw new InvalidValueException(factor);
 		this.a = a * factor;
 		this.b = b * factor;
 	}

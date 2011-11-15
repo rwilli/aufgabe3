@@ -1,6 +1,7 @@
-	/**
- * @author Gruppe222
+/**
+ * InvalidValueException class
  * 
+ * @author Gruppe222
  */
 public class InvalidValueException extends Exception {
 
