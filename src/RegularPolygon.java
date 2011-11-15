@@ -14,13 +14,13 @@ public class RegularPolygon implements IRegularPolygon, Polygon {
 
 		// Wieso <0 ? und  <60 ? 
 		if (s <= 0) throw new InvalidValueException(s);
-		if (angle < 60) throw new InvalidValueException(angle);
+		if (angle < 60) //throw new InvalidValueException(angle);
 		
 		this.s = s;
 		this.angle = angle;
 		
 		if (edges() == -1) {
-			throw new InvalidValueException(edges(), angle);
+			//throw new InvalidValueException(edges(), angle);
 		}
 	}
 

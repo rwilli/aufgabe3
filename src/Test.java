@@ -30,44 +30,126 @@ public class Test {
 			 */
 			
 			// Testcase 1
+			System.out.println("---------------Testcase 1---------------");
 			Rectangle r1 = new Rectangle(5, 3);
 			System.out.println("Rectangle r1 area: " + r1.area());
 			System.out.println("Rectangle r1 edges: " + r1.edges());
 			System.out.println("Rectangle r1 perimeter: " + r1.perimeter());
 			
-			r1.scale(1);
+			r1.scale(3);
 			System.out.println("Rectangle r1 area: " + r1.area());
 			System.out.println("Rectangle r1 edges: " + r1.edges());
 			System.out.println("Rectangle r1 perimeter: " + r1.perimeter());
 			
+			// Testcase 2
+			System.out.println("---------------Testcase 2---------------");
+			Square s1 = new Square(6);
+			System.out.println("Square s1 area: " + s1.area());
+			System.out.println("Square s1 edges: " + s1.edges());
+			System.out.println("Square s1 perimeter: " + s1.perimeter());
 			
-			/*Rectangle r1 = new Rectangle(5.0, 3.0);
-			Square s = new Square(5.0);
-			s.scale(20);
-			System.out.println("Rectangle r1 area: " + r1.area());
-			System.out.println("Rectangle r1 perimeter: " + r1.perimeter());
+			s1.scale(2);
+			System.out.println("Square s1 area: " + s1.area());
+			System.out.println("Square s1 edges: " + s1.edges());
+			System.out.println("Square s1 perimeter: " + s1.perimeter());
 			
-			System.out.println("Square s area: " + s.area());
-			System.out.println("Square s perimeter: " + s.perimeter());
+			s1.set(3);
+			System.out.println("Square s1 area: " + s1.area());
+			System.out.println("Square s1 edges: " + s1.edges());
+			System.out.println("Square s1 perimeter: " + s1.perimeter());
 			
-			// Test rectangle with invalid values
-			// Rectangle r2 = new Rectangle(-3.0, -2.0);
+			 // Testcase 3
+			System.out.println("---------------Testcase 3---------------");
+			Quadrangle q1 = new Rectangle(2, 3);
+			System.out.println("Rectangle q1 area: " + q1.area());
+			System.out.println("Rectangle q1 edges: " + q1.edges());
+			System.out.println("Rectangle q1 perimeter: " + q1.perimeter());
 			
-			// Regular triangle should be created
-			RegularPolygon rp1 = new RegularPolygon(2.0, 60);
-			//System.out.println("Regular Polygon rp1 edges: " +rp1.edges());
-			//System.out.println("Regular Polygon rp1 perimeter: " + rp1.perimeter());
-			// System.out.println("Regular Polygon rp1 area: " +rp1.area());
+			q1 = new Square(4);
+			System.out.println("Square r1 area: " + q1.area());
+			System.out.println("Square r1 edges: " + q1.edges());
+			System.out.println("Square r1 perimeter: " + q1.perimeter());
 			
+			// Testcase 4
+			System.out.println("---------------Testcase 4---------------");
+			Triangle t1 = new Triangle(3, 7, 9);
+			System.out.println("Triangle t1 area: " + t1.area());
+			System.out.println("Triangle t1 edges: " + t1.edges());
+			System.out.println("Triangle t1 perimeter: " + t1.perimeter());
 			
-			// Polygon should throw Exception
-			//RegularPolygon rp2 = new RegularPolygon(4.0, 61);
-			//System.out.println("Regular Polygon rp2 edges: " +rp2.edges());
-			//System.out.println("Regular Polygon rp2 perimeter: " + rp2.perimeter());
+			t1.setA(7);
+			t1.setB(12);
+			t1.setC(4);
+			System.out.println("Triangle t1 area: " + t1.area());
+			System.out.println("Triangle t1 edges: " + t1.edges());
+			System.out.println("Triangle t1 perimeter: " + t1.perimeter());
 			
-			EquilateralTriangle t = new EquilateralTriangle(10);
-			t.setA(20);
-			t.setB(30);*/
+			// Testcase 5
+			System.out.println("---------------Testcase 5---------------");
+			EquilateralTriangle et1 = new EquilateralTriangle(8);
+			System.out.println("EquilateralTriangle et1 area: " + et1.area());
+			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
+			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			
+			et1.scale(2);
+			System.out.println("EquilateralTriangle et1 area: " + et1.area());
+			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
+			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			
+			et1.set(4);
+			System.out.println("EquilateralTriangle et1 area: " + et1.area());
+			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
+			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			
+			et1.setA(2);
+			System.out.println("EquilateralTriangle et1 area: " + et1.area());
+			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
+			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			
+			et1.setB(9);
+			System.out.println("EquilateralTriangle et1 area: " + et1.area());
+			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
+			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			
+			et1.setC(13);
+			System.out.println("EquilateralTriangle et1 area: " + et1.area());
+			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
+			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			
+			// Testcase 6
+			System.out.println("---------------Testcase 6---------------");
+			RegularPolygon rp1 = new RegularPolygon(12, 60);
+			System.out.println("RegularPolygon rp1 area: " + rp1.area());
+			System.out.println("RegularPolygon rp1 edges: " + rp1.edges());
+			System.out.println("RegularPolygon rp1 perimeter: " + rp1.perimeter());	
+			
+			rp1.scale(4);
+			System.out.println("RegularPolygon rp1 area: " + rp1.area());
+			System.out.println("RegularPolygon rp1 edges: " + rp1.edges());
+			System.out.println("RegularPolygon rp1 perimeter: " + rp1.perimeter());
+			
+			rp1.set(3);
+			System.out.println("RegularPolygon rp1 area: " + rp1.area());
+			System.out.println("RegularPolygon rp1 edges: " + rp1.edges());
+			System.out.println("RegularPolygon rp1 perimeter: " + rp1.perimeter());
+
+			// Testcase 7
+			System.out.println("---------------Testcase 7---------------");
+			IRegularPolygon rp2 = new Square(13);
+			System.out.println("RegularPolygon rp2 area: " + rp2.area());
+			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
+			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());	
+			
+			rp2 = new RegularPolygon(9, 60);
+			System.out.println("RegularPolygon rp2 area: " + rp2.area());
+			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
+			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());
+			
+			rp2 = new EquilateralTriangle(9);
+			System.out.println("RegularPolygon rp2 area: " + rp2.area());
+			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
+			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());
+			
 		} catch (InvalidValueException e) {
 			e.printStackTrace();
 		}
