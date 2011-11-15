@@ -10,6 +10,8 @@ public class EquilateralTriangle extends Triangle implements IRegularPolygon {
 	/**
 	 * The constructor calls the constructor of the super class Triangle.
 	 * 
+	 * Length s must be greater than zero.
+	 * 
 	 * @param s length of side
 	 * @throws InvalidValueException if side is smaller than zero
 	 */

@@ -4,8 +4,7 @@
  * @author Gruppe222
  * 
  */
-//TODO Polygon unnštig ? 
-public class RegularPolygon implements IRegularPolygon, Polygon {
+public class RegularPolygon implements IRegularPolygon {
 
 	private int s;
 	private int angle;

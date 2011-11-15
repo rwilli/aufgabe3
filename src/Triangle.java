@@ -1,7 +1,7 @@
 /**
  * Triangle class implements the interface Polygon.
  * 
- * @author Gruppe222s
+ * @author Gruppe222
  * 
  */
 public class Triangle implements Polygon {
@@ -16,7 +16,9 @@ public class Triangle implements Polygon {
 	protected int c;
 
 	/**
-	 * Constructor for a triangle.
+	 * Constructor for a triangle
+	 * 
+	 * Length a, b and c must be greater than zero.
 	 * 
 	 * @param a length of side a
 	 * @param b length of side b
@@ -71,6 +73,9 @@ public class Triangle implements Polygon {
 	
 	/**
 	 * Set the side A
+	 * 
+	 * Length a must be greater than zero.
+	 * 
 	 * @param a new length of side a
 	 * @throws InvalidValueException 
 	 */
@@ -83,6 +88,9 @@ public class Triangle implements Polygon {
 	
 	/**
 	 * Set the side B
+	 * 
+	 * Length b must be greater than zero. 
+	 * 
 	 * @param b new length of side b
 	 * @throws InvalidValueException 
 	 */
@@ -95,6 +103,9 @@ public class Triangle implements Polygon {
 	
 	/**
 	 * Set the side C
+	 * 
+	 * Length c must be greater than zero.
+	 * 
 	 * @param c new length of side c
 	 * @throws InvalidValueException 
 	 */
