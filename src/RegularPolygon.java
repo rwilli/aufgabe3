@@ -9,6 +9,13 @@ public class RegularPolygon implements IRegularPolygon {
 	private int s;
 	private int angle;
 
+	/**
+	 * Constructor
+	 * 
+	 * @param s length of side s
+	 * @param angle of the regular polygon
+	 * @throws InvalidValueException if length is smaller than zero or if angle is smaller than 60
+	 */
 	public RegularPolygon(int s, int angle) throws InvalidValueException {
 
 		// The smallest possible RegularPolygon is an equilateral triangle,
