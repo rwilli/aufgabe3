@@ -150,6 +150,30 @@ public class Test {
 			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
 			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());
 			
+		/*
+			
+			//TestCase 8 
+			IRegularPolygon rp3 = (IRegularPolygon) new Triangle(13,1,2);
+			
+			 * Explicit cast doesn«t work, because the Interface IRegularPolygon
+			 * isn«t implemented in the class Triangle, because there is no subtyprelation
+			 
+			 
+			//TestCase 9 
+			IRegularPolygon rp4 = (IRegularPolygon) new Rectangle(13,1);
+		 	 
+		 	 * Explicit cast doesn«t work, because the Interface IRegularPolygon
+			 * isn«t implemented in the class Rectangle, because there is no subtyprelation		
+			 * 	 
+			 //TestCase10 
+			Rectangle r2 = new Square(2);
+			 
+			  * Because there is no relation between Square and Rectangle, we can«t create an object
+
+			
+			*/
+
+		
 		} catch (InvalidValueException e) {
 			e.printStackTrace();
 		}
