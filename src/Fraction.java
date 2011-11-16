@@ -14,6 +14,7 @@ public class Fraction {
 	 *            the value above the faction line.
 	 * @param denom
 	 *            the value below the fraction line
+	 *            denom must be greater than zero.
 	 * @throws InvalidValueException
 	 *             is thrown if the denominator is 0
 	 */
@@ -26,7 +27,7 @@ public class Fraction {
 
 	/**
 	 * Returns the complement of the current fraction
-	 * 
+	 * l
 	 * @return the complement of a fraction
 	 * @throws InvalidValueException
 	 *             is thrown if the denomiator is 0

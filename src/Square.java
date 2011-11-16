@@ -9,6 +9,8 @@ public class Square extends Quadrangle implements IRegularPolygon {
 	/**
 	 * The constructor calls the constructor of the super class Rectangle
 	 * 
+	 * Length s must be greater than zero.
+	 * 
 	 * @param s length of side
 	 * @throws InvalidValueException if side is smaller than zero
 	 */

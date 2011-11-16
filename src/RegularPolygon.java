@@ -18,7 +18,7 @@ public class RegularPolygon implements IRegularPolygon {
 			throw new InvalidValueException(s);
 		if (angle < 60)
 			throw new InvalidValueException(angle);
-
+		
 		this.s = s;
 		this.angle = angle;
 
@@ -70,6 +70,8 @@ public class RegularPolygon implements IRegularPolygon {
 
 	/**
 	 * Calculates the apothem of a regular polygon.
+	 * 
+	 * The Apothem is always greater zero
 	 * 
 	 * @return the apothem as double
 	 */
