@@ -1,159 +1,230 @@
+/**
+ * @author Gruppe 222
+ * 
+ * Class for testing 
+ *
+ */
 public class Test {
 	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main (String [] args) {
 		
 		try {
+			// because of polymorphism one polygon object is used for all subtypes
+			Polygon p;
+			
+			// because of polymorphism one abstract quadrangle object is used for
+			// the subtypes square and rectangle
+			Quadrangle q;
+			
+			// because of polymorphism one iregularpolygon object is used for
+			// the subtypes equilateraltriangle, regularpolygon and square
+			IRegularPolygon rp;
+			
+			// because of polymorphism one triangle object is used for
+			// the subtype equilateraltriangle
+			Triangle t;
+			
+			/* 
+			 * Testcase1
+			 * 
+			 * create from interface polygon instance rectangle with given parameters
+			 */
+			System.out.println("---------------Testcase 1---------------");
+			p = new Rectangle(5, 3);
+			System.out.println("Rectangle area: " + p.area());
+			System.out.println("Rectangle edges: " + p.edges());
+			System.out.println("Rectangle perimeter: " + p.perimeter());
+			
+			((Rectangle) p).scale(3);
+			System.out.println("Rectangle area: " + p.area());
+			System.out.println("Rectangle edges: " + p.edges());
+			System.out.println("Rectangle perimeter: " + p.perimeter());
 			
 			/*
-			 * Schreiben Sie eine Klasse Test zum Testen Ihrer Lösung. 
-			 * Erzeugen Sie Instanzen aller oben genannter Typen, wobei 
-			 * aufgrund von Polymorphismus ein einziges Objekt natürlich 
-			 * auch mehrere Typen abdecken kann. Überprüfen Sie so gut 
-			 * Sie können mittels Testfällen, ob dort, wo Sie eine 
-			 * Untertypbeziehung annehmen, Ersetzbarkeit gegeben ist. Wenn 
-			 * zwischen zwei der oben beschriebenen Typen keine Untertypbeziehung 
-			 * besteht, geben Sie in einem Kommentar in der Testklasse ein 
-			 * kurzes Beispiel an, in dem die Ersetztbarkeit verletzt ist. 
+			 * Testcase2
 			 * 
-			 * 
-			 * Vergewissern Sie sich der Korrektheit der Untertypbeziehungen 
-			 * zusätzlich über geeignete Testfälle. Die Anzahl der Testfälle 
-			 * ist nicht entscheidend, wohl aber deren Qualität: Es kommt darauf an, 
-			 * dass die Testfälle mögliche Verletzungen der Ersetzbarkeit aufdecken 
-			 * können. Umgekehrt sollen Sie sich auch vergewissern, dass Sie keine 
-			 * Gelegenheit für Untertypbeziehungen verpasst haben, indem Sie Beispiele 
-			 * dafür finden, wie angenommene Untertypbeziehungen das Ersetzbarkeitsprinzip 
-			 * verletzen würden. Schreiben Sie die Gegenbeispiele als Kommentare 
-			 * neben den Testfällen für Ersetzbarkeit in die Testklasse.
-			 * 
-			 * 
+			 * create from interface polygon instance square with given parameter
 			 */
-			
-			// Testcase 1
-			System.out.println("---------------Testcase 1---------------");
-			Rectangle r1 = new Rectangle(5, 3);
-			System.out.println("Rectangle r1 area: " + r1.area());
-			System.out.println("Rectangle r1 edges: " + r1.edges());
-			System.out.println("Rectangle r1 perimeter: " + r1.perimeter());
-			
-			r1.scale(3);
-			System.out.println("Rectangle r1 area: " + r1.area());
-			System.out.println("Rectangle r1 edges: " + r1.edges());
-			System.out.println("Rectangle r1 perimeter: " + r1.perimeter());
-			
-			// Testcase 2
 			System.out.println("---------------Testcase 2---------------");
-			Square s1 = new Square(6);
-			System.out.println("Square s1 area: " + s1.area());
-			System.out.println("Square s1 edges: " + s1.edges());
-			System.out.println("Square s1 perimeter: " + s1.perimeter());
+			p = new Square(6);
+			System.out.println("Square area: " + p.area());
+			System.out.println("Square edges: " + p.edges());
+			System.out.println("Square perimeter: " + p.perimeter());
 			
-			s1.scale(2);
-			System.out.println("Square s1 area: " + s1.area());
-			System.out.println("Square s1 edges: " + s1.edges());
-			System.out.println("Square s1 perimeter: " + s1.perimeter());
+			((Square) p).scale(2);
+			System.out.println("Square area: " + p.area());
+			System.out.println("Square edges: " + p.edges());
+			System.out.println("Square perimeter: " + p.perimeter());
 			
-			s1.set(3);
-			System.out.println("Square s1 area: " + s1.area());
-			System.out.println("Square s1 edges: " + s1.edges());
-			System.out.println("Square s1 perimeter: " + s1.perimeter());
+			((Square) p).set(3);
+			System.out.println("Square area: " + p.area());
+			System.out.println("Square edges: " + p.edges());
+			System.out.println("Square perimeter: " + p.perimeter());
 			
-			 // Testcase 3
+			/*
+			 * Testcase 3
+			 * 
+			 * create from interface polygon instance triangle with given parameters
+			 */
 			System.out.println("---------------Testcase 3---------------");
-			Quadrangle q1 = new Rectangle(2, 3);
-			System.out.println("Rectangle q1 area: " + q1.area());
-			System.out.println("Rectangle q1 edges: " + q1.edges());
-			System.out.println("Rectangle q1 perimeter: " + q1.perimeter());
+			p = new Triangle(3, 7, 9);
+			System.out.println("Triangle area: " + p.area());
+			System.out.println("Triangle edges: " + p.edges());
+			System.out.println("Triangle perimeter: " + p.perimeter());
+						
+			((Triangle) p).setA(7);
+			((Triangle) p).setB(12);
+			((Triangle) p).setC(4);
+			System.out.println("Triangle area: " + p.area());
+			System.out.println("Triangle edges: " + p.edges());
+			System.out.println("Triangle perimeter: " + p.perimeter());
 			
-			q1 = new Square(4);
-			System.out.println("Square r1 area: " + q1.area());
-			System.out.println("Square r1 edges: " + q1.edges());
-			System.out.println("Square r1 perimeter: " + q1.perimeter());
-			
-			// Testcase 4
+			/*
+			 * Testcase 4
+			 * 
+			 * create from interface polygon instance equilateraltriangle with given parameter
+			 */
 			System.out.println("---------------Testcase 4---------------");
-			Triangle t1 = new Triangle(3, 7, 9);
-			System.out.println("Triangle t1 area: " + t1.area());
-			System.out.println("Triangle t1 edges: " + t1.edges());
-			System.out.println("Triangle t1 perimeter: " + t1.perimeter());
+			p = new EquilateralTriangle(8);
+			System.out.println("EquilateralTriangle area: " + p.area());
+			System.out.println("EquilateralTriangle edges: " + p.edges());
+			System.out.println("EquilateralTriangle perimeter: " + p.perimeter());
 			
-			t1.setA(7);
-			t1.setB(12);
-			t1.setC(4);
-			System.out.println("Triangle t1 area: " + t1.area());
-			System.out.println("Triangle t1 edges: " + t1.edges());
-			System.out.println("Triangle t1 perimeter: " + t1.perimeter());
+			((EquilateralTriangle) p).scale(2);
+			System.out.println("EquilateralTriangle area: " + p.area());
+			System.out.println("EquilateralTriangle edges: " + p.edges());
+			System.out.println("EquilateralTriangle perimeter: " + p.perimeter());
+						
+			((EquilateralTriangle) p).set(4);
+			System.out.println("EquilateralTriangle area: " + p.area());
+			System.out.println("EquilateralTriangle edges: " + p.edges());
+			System.out.println("EquilateralTriangle perimeter: " + p.perimeter());
 			
-			// Testcase 5
+			((EquilateralTriangle) p).setA(2);
+			System.out.println("EquilateralTriangle area: " + p.area());
+			System.out.println("EquilateralTriangle edges: " + p.edges());
+			System.out.println("EquilateralTriangle perimeter: " + p.perimeter());
+			
+			((EquilateralTriangle) p).setB(9);
+			System.out.println("EquilateralTriangle area: " + p.area());
+			System.out.println("EquilateralTriangle edges: " + p.edges());
+			System.out.println("EquilateralTriangle perimeter: " + p.perimeter());
+			
+			((EquilateralTriangle) p).setC(13);
+			System.out.println("EquilateralTriangle area: " + p.area());
+			System.out.println("EquilateralTriangle edges: " + p.edges());
+			System.out.println("EquilateralTriangle perimeter: " + p.perimeter());
+			
+			/*
+			 * Testcase 5
+			 * 
+			 * create from interface polygon instance regularpolygon with given parameters
+			 */
 			System.out.println("---------------Testcase 5---------------");
-			EquilateralTriangle et1 = new EquilateralTriangle(8);
-			System.out.println("EquilateralTriangle et1 area: " + et1.area());
-			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
-			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			p = new RegularPolygon(12, 60);
+			System.out.println("RegularPolygon area: " + p.area());
+			System.out.println("RegularPolygon edges: " + p.edges());
+			System.out.println("RegularPolygon perimeter: " + p.perimeter());	
 			
-			et1.scale(2);
-			System.out.println("EquilateralTriangle et1 area: " + et1.area());
-			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
-			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			((RegularPolygon) p).scale(4);
+			System.out.println("RegularPolygon area: " + p.area());
+			System.out.println("RegularPolygon edges: " + p.edges());
+			System.out.println("RegularPolygon perimeter: " + p.perimeter());
 			
-			et1.set(4);
-			System.out.println("EquilateralTriangle et1 area: " + et1.area());
-			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
-			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
+			((RegularPolygon) p).set(3);
+			System.out.println("RegularPolygon area: " + p.area());
+			System.out.println("RegularPolygon edges: " + p.edges());
+			System.out.println("RegularPolygon perimeter: " + p.perimeter());
 			
-			et1.setA(2);
-			System.out.println("EquilateralTriangle et1 area: " + et1.area());
-			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
-			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
-			
-			et1.setB(9);
-			System.out.println("EquilateralTriangle et1 area: " + et1.area());
-			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
-			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
-			
-			et1.setC(13);
-			System.out.println("EquilateralTriangle et1 area: " + et1.area());
-			System.out.println("EquilateralTriangle et1 edges: " + et1.edges());
-			System.out.println("EquilateralTriangle et1 perimeter: " + et1.perimeter());
-			
-			// Testcase 6
+			/*
+			 * Testcase 6
+			 * 
+			 * create from abstract class quadrangle instance rectangle with given parameters
+			 * after that, create instance square with given parameter
+			 */
 			System.out.println("---------------Testcase 6---------------");
-			RegularPolygon rp1 = new RegularPolygon(12, 60);
-			System.out.println("RegularPolygon rp1 area: " + rp1.area());
-			System.out.println("RegularPolygon rp1 edges: " + rp1.edges());
-			System.out.println("RegularPolygon rp1 perimeter: " + rp1.perimeter());	
+			q = new Rectangle(2, 3);
+			System.out.println("Rectangle area: " + q.area());
+			System.out.println("Rectangle edges: " + q.edges());
+			System.out.println("Rectangle perimeter: " + q.perimeter());
 			
-			rp1.scale(4);
-			System.out.println("RegularPolygon rp1 area: " + rp1.area());
-			System.out.println("RegularPolygon rp1 edges: " + rp1.edges());
-			System.out.println("RegularPolygon rp1 perimeter: " + rp1.perimeter());
-			
-			rp1.set(3);
-			System.out.println("RegularPolygon rp1 area: " + rp1.area());
-			System.out.println("RegularPolygon rp1 edges: " + rp1.edges());
-			System.out.println("RegularPolygon rp1 perimeter: " + rp1.perimeter());
+			q = new Square(4);
+			System.out.println("Square area: " + q.area());
+			System.out.println("Square edges: " + q.edges());
+			System.out.println("Square perimeter: " + q.perimeter());
 
-			// Testcase 7
+			/*
+			 * Testcase 7
+			 * 
+			 * create from interface regularpolygon instance square with given parameter
+			 * then create instance regularpolygon with given parameters
+			 * and after that create instance equilateraltriangle with given parameter
+			 */
 			System.out.println("---------------Testcase 7---------------");
-			IRegularPolygon rp2 = new Square(13);
-			System.out.println("RegularPolygon rp2 area: " + rp2.area());
-			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
-			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());	
+			rp = new Square(13);
+			System.out.println("Square area: " + rp.area());
+			System.out.println("Square edges: " + rp.edges());
+			System.out.println("Square perimeter: " + rp.perimeter());	
 			
-			rp2 = new RegularPolygon(9, 60);
-			System.out.println("RegularPolygon rp2 area: " + rp2.area());
-			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
-			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());
+			rp.scale(3);
+			System.out.println("Square area: " + rp.area());
+			System.out.println("Square edges: " + rp.edges());
+			System.out.println("Square perimeter: " + rp.perimeter());
 			
-			rp2 = new EquilateralTriangle(9);
-			System.out.println("RegularPolygon rp2 area: " + rp2.area());
-			System.out.println("RegularPolygon rp2 edges: " + rp2.edges());
-			System.out.println("RegularPolygon rp2 perimeter: " + rp2.perimeter());
+			rp.set(18);
+			System.out.println("Square area: " + rp.area());
+			System.out.println("Square edges: " + rp.edges());
+			System.out.println("Square perimeter: " + rp.perimeter());
 			
+			
+			rp = new RegularPolygon(9, 60);
+			System.out.println("RegularPolygon area: " + rp.area());
+			System.out.println("RegularPolygon edges: " + rp.edges());
+			System.out.println("RegularPolygon perimeter: " + rp.perimeter());
+			
+			rp.scale(5);
+			System.out.println("RegularPolygon area: " + rp.area());
+			System.out.println("RegularPolygon edges: " + rp.edges());
+			System.out.println("RegularPolygon perimeter: " + rp.perimeter());
+			
+			rp.set(13);
+			System.out.println("RegularPolygon area: " + rp.area());
+			System.out.println("RegularPolygon edges: " + rp.edges());
+			System.out.println("RegularPolygon perimeter: " + rp.perimeter());
+			
+			rp = new EquilateralTriangle(9);
+			System.out.println("EquilateralTriangle area: " + rp.area());
+			System.out.println("EquilateralTriangle edges: " + rp.edges());
+			System.out.println("EquilateralTriangle perimeter: " + rp.perimeter());
+			
+			/*
+			 * Testcase 8
+			 * 
+			 * create from class triangle instance triangle with given parameters
+			 * and then instance euqilateraltriangle with given parameter
+			 */
+			System.out.println("---------------Testcase 8---------------");
+			t = new Triangle(5, 12, 15);
+			System.out.println("Triangle area: " + t.area());
+			System.out.println("Triangle edges: " + t.edges());
+			System.out.println("Triangle perimeter: " + t.perimeter());
+			
+			t = new EquilateralTriangle(16);
+			System.out.println("EquilateralTriangle area: " + t.area());
+			System.out.println("EquilateralTriangle edges: " + t.edges());
+			System.out.println("EquilateralTriangle perimeter: " + t.perimeter());
+			
+			((EquilateralTriangle) t).set(5);	
+			System.out.println("EquilateralTriangle area: " + t.area());
+			System.out.println("EquilateralTriangle edges: " + t.edges());
+			System.out.println("EquilateralTriangle perimeter: " + t.perimeter());
+					
 		} catch (InvalidValueException e) {
 			e.printStackTrace();
-		}
-		
-		
+		}	
 	}	
 }
