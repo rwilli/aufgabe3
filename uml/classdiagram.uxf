@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>200</x>
+      <x>230</x>
       <y>0</y>
       <w>105</w>
       <h>95</h>
@@ -20,7 +20,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>500</x>
+      <x>530</x>
       <y>305</y>
       <w>115</w>
       <h>95</h>
@@ -34,7 +34,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>345</x>
+      <x>375</x>
       <y>305</y>
       <w>105</w>
       <h>95</h>
@@ -50,7 +50,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>30</x>
       <y>145</y>
       <w>165</w>
       <h>95</h>
@@ -70,7 +70,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>60</x>
+      <x>90</x>
       <y>305</y>
       <w>105</w>
       <h>95</h>
@@ -85,7 +85,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>35</x>
+      <x>65</x>
       <y>225</y>
       <w>84</w>
       <h>89</h>
@@ -96,7 +96,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>40</x>
+      <x>70</x>
       <y>80</y>
       <w>189</w>
       <h>74</h>
@@ -107,7 +107,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>265</x>
+      <x>295</x>
       <y>80</y>
       <w>194</w>
       <h>74</h>
@@ -118,7 +118,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>185</x>
+      <x>215</x>
       <y>305</y>
       <w>140</w>
       <h>95</h>
@@ -136,7 +136,7 @@ default::Polygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>200</x>
+      <x>230</x>
       <y>145</y>
       <w>105</w>
       <h>95</h>
@@ -151,7 +151,7 @@ default::IRegularPolygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>240</x>
+      <x>270</x>
       <y>80</y>
       <w>24</w>
       <h>74</h>
@@ -162,7 +162,7 @@ default::IRegularPolygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>230</x>
+      <x>260</x>
       <y>225</y>
       <w>24</w>
       <h>89</h>
@@ -173,7 +173,7 @@ default::IRegularPolygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>130</x>
+      <x>160</x>
       <y>225</y>
       <w>94</w>
       <h>89</h>
@@ -184,7 +184,7 @@ default::IRegularPolygon
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>285</x>
+      <x>315</x>
       <y>225</y>
       <w>84</w>
       <h>89</h>
@@ -195,7 +195,7 @@ default::IRegularPolygon
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>415</x>
+      <x>445</x>
       <y>145</y>
       <w>105</w>
       <h>95</h>
@@ -214,7 +214,7 @@ default::Quadrangle
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>395</x>
+      <x>425</x>
       <y>225</y>
       <w>49</w>
       <h>89</h>
@@ -225,7 +225,7 @@ default::Quadrangle
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>475</x>
+      <x>505</x>
       <y>225</y>
       <w>84</w>
       <h>89</h>
